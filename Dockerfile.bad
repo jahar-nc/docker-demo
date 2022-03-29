@@ -1,0 +1,9 @@
+FROM maven:3-jdk-8
+
+# build the jar
+COPY . /app/
+WORKDIR /app
+RUN mvn package
+
+# default command to run when starting the container
+CMD java -jar /app/target/simple-logger-1.0-SNAPSHOT-jar-with-dependencies.jar

@@ -1,0 +1,7 @@
+FROM openjdk:8-jre-alpine
+
+WORKDIR /app/
+COPY target/simple-logger-1.0-SNAPSHOT-jar-with-dependencies.jar simple-logger.jar
+
+CMD java -jar simple-logger.jar
+
