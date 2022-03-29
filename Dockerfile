@@ -16,7 +16,7 @@ COPY src/main/ ${APPHOME}/src/main/
 RUN mvn package
 
 # new environment, forget the rest
-FROM java:8-alpine
+FROM openjdk:8-jre-alpine
 
 # default version for jar
 ARG version=1.0-SNAPSHOT
